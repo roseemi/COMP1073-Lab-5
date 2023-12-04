@@ -55,10 +55,12 @@ navigator.getBattery().then(battery => {
 
 /* LAB */
 
-var url = "https://robohash.org/";
+navigator.getBattery().then(battery => {
+    var url = "https://robohash.org/";
 
-var robot = document.createElement("img");
+    var robot = document.createElement("img");
 
-robot.src = `${url}${battery.level * 100}.png`;
+    robot.src = `${url}${battery.level * 100}.png`;
 
-document.getElementById("battery").appendChild(robot);
+    document.getElementById("battery").appendChild(robot);
+});
